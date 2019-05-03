@@ -4,4 +4,4 @@ const logIn=(clientId,redirectUri,state) =>{
     location.assign(url)
 }
 
-logIn("545764b4f177df6362aa","http://127.0.0.1:8080/login.html","active")
+logIn("545764b4f177df6362aa","login.html","active")
