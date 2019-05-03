@@ -1,0 +1,45 @@
+.create-pop-up{
+    position: fixed;
+    z-index: 1000;
+    height:100%;
+    width: 100%;
+    background-color:rgba($color-black3,.5);
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    &--container{
+        padding: 8rem 6rem;
+        background-color: $color-purple;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &--input{
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+        margin-bottom: 3rem;
+        border:4px solid $color-black;
+    }
+
+    &--submit{
+        border-radius: 1rem;
+        height:4rem;
+        width:7rem;
+        color:$color-gray1;
+        background-color:$color-black ;
+        border-width: 0;
+        cursor: pointer;
+        &:focus{
+            outline-width: 0;
+        }
+    }
+
+    &--use-case{
+        color:$color-black;
+        font-size: 2.5rem;
+    }
+
+}

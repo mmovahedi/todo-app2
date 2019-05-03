@@ -1,0 +1,26 @@
+.set-visible{
+    visibility: visible !important;
+    
+}
+.set-display-none{
+    display:none !important;
+}
+.set-left{
+  
+   right:40px !important;
+   width:1rem;
+}
+
+.background-color-1{
+    background-color: yellow !important;
+}
+
+.border-color-1{
+    border-color: $color-green1 !important;
+}
+.set-opacity-1{
+    opacity: .4 !important;
+}
+.disable-pointer-event{
+    pointer-events: none;
+}

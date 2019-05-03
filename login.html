@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel="stylesheet" href="main.css">
+
+    </head>
+    <body> 
+        <div class="loader-container"> <div class="loader"></div></div>
+        <div class="create-pop-up">
+
+            <div class="create-pop-up--container">
+                <h2 class="create-pop-up--use-case"></h2>
+                <input type="text" class="create-pop-up--input">
+                <div class="create-pop-up--btn-container">
+                        <button class="create-pop-up--submit">ok</button>
+                        <button class="create-pop-up--submit">cancel</button>
+                </div>
+                
+            </div>
+        </div> 
+        
+        <div class="app">
+            <div class="app--profile">
+                <div class="app--avatar">
+                        <div class="app--username"><p></p></div>
+                </div>
+                
+                <input class="app--input app--filter app--filter__1" type="text" placeholder="filter">
+                <div class="app--create-list app--create-list__1">
+                        <span class="app--icon">&#43</span>
+                        Create list</div>
+                <ul class="app--groups">
+                    
+                </ul>
+                
+            </div>
+            <div class="app--todos-tasks app--add-to-do">
+            <button class="app--add-to-do-btn">add</button>
+                <input class="app--input" type="text" placeholder="add a todo...">
+                <input class="app--input app--filter app--filter__2" type="text" placeholder="filter">
+                <ul class="app--tasks">
+
+                </ul>
+                
+            </div>
+           <!-- <div class="app--info"></div>
+        <div class="header"></div>-->
+        </div>
+        <script src="filter.js"></script>
+        <script src="wunderListApi.js"></script>
+        <script src="api.js"></script>
+    </body>
+</html>

@@ -1,0 +1,428 @@
+body {
+  background-color: #242424;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #777777;
+}
+
+html {
+  font-size: 65%;
+}
+
+.set-visible {
+  visibility: visible !important;
+}
+
+.set-display-none {
+  display: none !important;
+}
+
+.set-left {
+  right: 40px !important;
+  width: 1rem;
+}
+
+.background-color-1 {
+  background-color: yellow !important;
+}
+
+.border-color-1 {
+  border-color: #28b483 !important;
+}
+
+.set-opacity-1 {
+  opacity: .4 !important;
+}
+
+.disable-pointer-event {
+  pointer-events: none;
+}
+
+.header {
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: purple;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.app--input {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
+  border-right-width: 0;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  border: 3px solid purple;
+  background-color: #2A2A2A;
+  color: inherit;
+}
+
+.app--input:focus {
+  outline-width: 0;
+}
+
+.app--profile {
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-right: 2px solid #2A2A2A;
+  position: relative;
+}
+
+.app--todos-tasks {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-right: 2px solid #2A2A2A;
+  position: relative;
+}
+
+.app--filter__1 {
+  top: 15rem;
+}
+
+.app--filter__2 {
+  top: 12rem;
+}
+
+.app--add-to-do {
+  top: 3rem;
+}
+
+.app--info {
+  -webkit-box-flex: 4;
+      -ms-flex-positive: 4;
+          flex-grow: 4;
+}
+
+.app--username {
+  position: absolute;
+  font-size: 2.5rem;
+  left: 120%;
+  top: 1.5rem;
+}
+
+.app--add-to-do-btn {
+  border-radius: 1rem;
+  height: 4rem;
+  width: 7rem;
+  color: #242424;
+  position: absolute;
+  top: 4rem;
+  left: 10%;
+  -webkit-transform: translateX(-10%);
+          transform: translateX(-10%);
+  font-weight: 700;
+  background-color: purple;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.app--add-to-do-btn:focus {
+  outline-width: 0;
+}
+
+.app--avatar {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50rem;
+  background-position: center;
+  background-size: 100%;
+  position: absolute;
+  top: 2rem;
+  left: 20%;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
+.app--groups, .app--tasks {
+  position: absolute;
+  width: 100%;
+  max-height: 57vh;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: scroll;
+}
+
+.app--groups::-webkit-scrollbar, .app--tasks::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+.app--groups li, .app--tasks li {
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 0;
+  border-top: 1px solid #2A2A2A;
+  border-bottom: 1px solid #2A2A2A;
+  cursor: pointer;
+  position: relative;
+}
+
+.app--groups {
+  top: 25rem;
+  border-top: 1px solid red;
+  border-bottom: 2px solid red;
+}
+
+.app--groups li:hover {
+  background-color: #289FDA;
+  color: #242424;
+}
+
+.app--groups li {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.app--tasks {
+  top: 22.1rem;
+  border-top: 1px solid orange;
+}
+
+.app--tasks li {
+  border-color: orange !important;
+  position: relative;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.app--tasks li:hover .app--priority__2 {
+  background-color: #289FDA;
+  color: #242424;
+}
+
+.app--tasks li:hover {
+  background-color: #289FDA;
+  color: #242424;
+}
+
+.app--priority {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.app--priority__1 {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  height: 2rem;
+  width: 2rem;
+  background-color: yellow;
+  right: 4.5px;
+}
+
+.app--priority__2 {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  height: 1.5rem;
+  width: 1.5rem;
+  right: 7px;
+  background-color: #242424;
+}
+
+.app--create-list {
+  position: absolute;
+  top: 21.2rem;
+  width: 100%;
+  display: inline-block;
+  padding: 1rem 0;
+  border-top: 1px solid #2A2A2A;
+  border-bottom: 1px solid #2A2A2A;
+  cursor: pointer;
+  text-align: center;
+  color: #289FDA;
+  font-size: 1.5rem;
+}
+
+.app--create-list:hover {
+  background-color: #2A2A2A;
+}
+
+.app--icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 2rem;
+}
+
+.app--icon__1 {
+  color: red;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.app--icon__1:active {
+  color: #242424;
+}
+
+.app--checkbox-checked {
+  content: "";
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50rem;
+  background-color: #28b483;
+  position: absolute;
+  top: 47%;
+  left: 47%;
+  -webkit-transform: translate(-47%, -47%);
+          transform: translate(-47%, -47%);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.app--checkbox {
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 10rem;
+  border: 5px solid #ED3E2F;
+  display: inline-block;
+}
+
+.create-pop-up {
+  position: fixed;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.create-pop-up--container {
+  padding: 8rem 6rem;
+  background-color: purple;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.create-pop-up--input {
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  margin-bottom: 3rem;
+  border: 4px solid #242424;
+}
+
+.create-pop-up--submit {
+  border-radius: 1rem;
+  height: 4rem;
+  width: 7rem;
+  color: #777777;
+  background-color: #242424;
+  border-width: 0;
+  cursor: pointer;
+}
+
+.create-pop-up--submit:focus {
+  outline-width: 0;
+}
+
+.create-pop-up--use-case {
+  color: #242424;
+  font-size: 2.5rem;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  border-bottom: 16px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+.loader-container {
+  position: fixed;
+  z-index: 1600;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */

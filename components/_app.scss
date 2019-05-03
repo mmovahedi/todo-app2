@@ -1,0 +1,228 @@
+.app{
+    display: flex;
+    height: 100vh;
+    //position: relative;
+    &--input{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        border-right-width: 0;
+        border-radius: .5rem;
+        padding: .5rem 1rem;
+        border:3px solid $color-purple;
+        background-color: $color-black2;
+        color: inherit;
+        &:focus{
+            outline-width: 0;
+        }
+    }
+    &--profile{
+        overflow: hidden;
+        flex-grow: 1;
+        border-right:2px solid $color-black2;
+        position: relative;
+    }
+    &--todos-tasks{
+        flex-grow: 1;
+        border-right:2px solid $color-black2;
+        position: relative;
+    }
+    &--filter{
+        
+        &__1{
+            top:15rem;
+        }
+        &__2{
+            top:12rem;
+        }
+    }
+    &--add-to-do{
+        top:3rem;
+    }
+    &--info{
+        flex-grow:4;
+    }
+    &--username{
+        position: absolute;
+        font-size: 2.5rem;
+        left: 120%;
+        top: 1.5rem;
+    }
+    &--add-to-do-btn{
+        border-radius: 1rem;
+        height:4rem;
+        width:7rem;
+        color:$color-black;
+        position: absolute;
+        top: 4rem;
+        left: 10%;
+        transform: translateX(-10%);
+        font-weight: 700;
+        background-color:$color-purple ;
+        border-width: 0;
+        cursor: pointer;
+        &:focus{
+            outline-width: 0;
+        }
+    }
+    &--avatar{
+        width: 10rem;
+        height:10rem;
+        border-radius: 50rem;
+        background-position: center;
+        background-size: 100%;
+        position: absolute;
+        top: 2rem;
+        left:20%;
+        transform: translateX(-20%);
+
+    }
+    &--groups,&--tasks{
+        position: absolute;
+        width: 100%;
+        max-height: 57vh;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        font-size: 1.5rem;
+        display:flex;
+        flex-direction: column;
+        overflow: scroll;
+        
+        &::-webkit-scrollbar {
+            width: 0px;  /* Remove scrollbar space */
+            background: transparent;  /* Optional: just make scrollbar invisible */
+        }
+        li{
+            
+            width: 100%;
+            display: inline-block;
+            padding:1rem 0;
+            border-top:1px solid $color-black2;
+            border-bottom: 1px solid $color-black2;
+            cursor: pointer;
+            position: relative;
+            
+
+        }
+        
+    }
+    &--groups{
+        top:25rem;
+        border-top: 1px solid red;
+        border-bottom: 2px solid red;
+        li:hover{
+            background-color: $color-blue1;
+            color:$color-black
+         }
+         li{
+            transition: all .3s;
+         }
+    }
+
+    &--tasks{
+        top:22.1rem;
+        border-top: 1px solid orange;
+        
+      li{
+          border-color: orange !important;
+          position: relative;
+          transition: all .5s;
+      }
+      li:hover .app--priority__2{
+        background-color: $color-blue1;
+        color:$color-black
+     }
+     li:hover{
+        background-color: $color-blue1;
+        color: $color-black;
+     }
+    }
+    &--priority{
+        
+        position: absolute;
+        top: 50%;
+        right:1rem;
+        transform: translateY(-50%);
+        -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+       clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+       &__1{
+        transition: all .5s;
+        height: 2rem;
+         width: 2rem;
+        background-color: yellow;
+        right: 4.5px;
+       }
+       &__2{
+        transition: all .5s;
+        height:1.5rem;
+        width: 1.5rem;
+        right:7px;
+        background-color: $color-black;
+       }
+    }
+    &--create-list{
+       position: absolute;
+       top: 21.2rem;
+       width: 100%;
+       display: inline-block;
+       padding:1rem 0;
+       border-top:1px solid $color-black2;
+       border-bottom: 1px solid $color-black2;
+       cursor: pointer;
+       text-align: center;
+       color: $color-blue1;
+       font-size: 1.5rem;
+       &:hover{
+           background-color: $color-black2;
+           
+       }
+
+    }
+    &--icon{
+        position: absolute;
+        top:50%;
+        left:1rem;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        &__1{
+            color: red;
+            position: absolute;
+            top:50%;
+            right:1rem;
+            transform: translateY(-50%);
+            &:active{
+                color: $color-black;
+            }
+        }
+    }
+   &--checkbox-checked{
+        content: "";
+        display: inline-block;
+        width: 1.1rem;
+        height:1.1rem;
+        border-radius: 50rem;
+        background-color: $color-green1;
+        position: absolute;
+        top: 47%;
+        left:47%;
+        transform:translate(-47%,-47%);
+        transition: all .5s;
+     
+   }
+    &--checkbox{
+        position: absolute;
+        left: 3rem;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 1.6rem;
+        width: 1.6rem;
+        border-radius: 10rem;
+        border: 5px solid $color-red1;
+        display: inline-block;
+        
+    }
+
+}

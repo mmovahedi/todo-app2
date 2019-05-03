@@ -1,0 +1,1 @@
+.app{display:flex;height:65vh}.app--profile{flex-grow:1.5;border:1px solid}.app--todos-list{flex-grow:2;background-color:blue}.app--info{flex-grow:4}
